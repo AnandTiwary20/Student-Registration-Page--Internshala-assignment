@@ -1,25 +1,27 @@
-  /* Modern Color Scheme with Gradients */
+  /* Modern Color Scheme with Dark Theme */
 :root {
-  --primary: #4a6bff;
-  --primary-light: #6c8cff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --danger: #ff4757;
-  --light: #f8f9fa;
-  --dark: #2f3542;
+  --primary: #6c8cff;
+  --primary-dark: #4a6bff;
+  --secondary: #a0aec0;
+  --success: #48bb78;
+  --danger: #f56565;
+  --light: #e2e8f0;
+  --dark: #1a202c;
+  --darker: #0f172a;
   --border-radius: 10px;
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  --gradient-primary: linear-gradient(135deg, #4a6bff 0%, #6c5ce7 100%);
-  --gradient-danger: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
-  --gradient-success: linear-gradient(135deg, #20bf6b 0%, #26de81 100%);
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  --gradient-danger: linear-gradient(135deg, #f6ad55 0%, #f56565 100%);
+  --gradient-success: linear-gradient(135deg, #68d391 0%, #48bb78 100%);
+  --surface: rgba(30, 41, 59, 0.8);
 }
 
 /* Base Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(120deg, #f6f8fd 0%, #e9edff 100%);
-  color: #333;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: var(--light);
   min-height: 100vh;
   padding: 2rem 1rem;
   margin: 0;
@@ -28,14 +30,14 @@ body {
 .container {
   max-width: 1000px;
   margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--surface);
   backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   padding: 2.5rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Header Styles */
@@ -61,32 +63,31 @@ p.subtitle {
 
 /* Form Styles */
 #studentForm {
-  background: white;
+  background: rgba(30, 41, 59, 0.6);
   padding: 2.5rem;
   border-radius: var(--border-radius);
   margin-bottom: 3rem;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #studentForm input {
   width: 100%;
   padding: 1rem 1.5rem 1rem 3rem;
   margin-bottom: 1.2rem;
-  border: 2px solid #e1e5ee;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background-color: #f8f9ff;
-  color: var(--dark);
+  background-color: rgba(15, 23, 42, 0.8);
+  color: var(--light);
 }
 
 #studentForm input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
-  background-color: white;
+  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.2);
+  background-color: rgba(15, 23, 42, 0.9);
 }
 
 button[type="submit"] {
@@ -121,9 +122,8 @@ button[type="submit"]:active {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   margin: 2rem 0;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1px;
 }
 
@@ -132,7 +132,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   min-width: 600px;
-  background: white;
+  background: rgba(30, 41, 59, 0.6);
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -140,7 +140,7 @@ table {
 th, td {
   padding: 1.2rem 1.8rem;
   text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
@@ -160,7 +160,7 @@ tr:last-child td {
 }
 
 tr:hover {
-  background-color: #f8f9ff;
+  background: rgba(74, 107, 255, 0.1) !important;
 }
 
 /* Action Buttons */
@@ -260,3 +260,12 @@ tbody tr:nth-child(1) { animation-delay: 0.1s; }
 tbody tr:nth-child(2) { animation-delay: 0.2s; }
 tbody tr:nth-child(3) { animation-delay: 0.3s; }
 tbody tr:nth-child(4) { animation-delay: 0.4s; }
+
+/* Update scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
