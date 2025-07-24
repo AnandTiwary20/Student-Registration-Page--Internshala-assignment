@@ -1,4 +1,4 @@
-  /* Modern Color Scheme with Dark Theme */
+  /* Modern Color Scheme with Dark Theme used more better themes */
 :root {
   --primary: #6c8cff;
   --primary-dark: #4a6bff;
@@ -16,7 +16,7 @@
   --surface: rgba(30, 41, 59, 0.8);
 }
 
-/* Base Styles */
+/* Base Styles for base modern themes*/
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -40,7 +40,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Header Styles */
+/* Header Styles for themes*/
 h1 {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -61,7 +61,7 @@ p.subtitle {
   font-weight: 500;
 }
 
-/* Form Styles */
+/* Form  */
 #studentForm {
   background: rgba(30, 41, 59, 0.6);
   padding: 2.5rem;
@@ -116,7 +116,7 @@ button[type="submit"]:active {
   transform: translateY(0);
 }
 
-/* Table Styles */
+/* Table  */
 .table-container {
   overflow-x: auto;
   border-radius: var(--border-radius);
@@ -163,7 +163,7 @@ tr:hover {
   background: rgba(74, 107, 255, 0.1) !important;
 }
 
-/* Action Buttons */
+/* Buttons */
 .actions {
   display: flex;
   gap: 0.5rem;
@@ -212,7 +212,7 @@ tr:hover {
   z-index: 1;
 }
 
-/* Responsive Design */
+/* Responsive incrementing with media queries*/
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem;
@@ -245,7 +245,7 @@ tr:hover {
   }
 }
 
-/* Animation */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
