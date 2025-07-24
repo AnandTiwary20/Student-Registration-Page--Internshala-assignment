@@ -53,7 +53,7 @@ form.addEventListener('submit', function(event) {
     updateScrollbar();
 });
 
-// Rendering  students to the table
+
 function renderStudents() {
     tableBody.innerHTML = '';
     
@@ -79,7 +79,7 @@ function renderStudents() {
         tableBody.appendChild(row);
     });
     
-    // Add event listeners to edit and delete buttons
+    // Added event listeners to edit and delete buttons
     document.querySelectorAll('.edit-btn').forEach(btn => {
         btn.addEventListener('click', handleEdit);
     });
@@ -89,7 +89,7 @@ function renderStudents() {
     });
 }
 
-// Handle edit button click
+// Handle edit button 
 function handleEdit(e) {
     const studentId = e.target.dataset.id;
     const student = students.find(s => s.studentId === studentId);
@@ -120,7 +120,7 @@ function handleDelete(e) {
     }
 }
 
-// Save students array to localStorage
+
 function saveToLocalStorage() {
     localStorage.setItem('students', JSON.stringify(students));
 }
@@ -133,14 +133,14 @@ function validateInputs(name, studentId, email, contact) {
         return false;
     }
     
-    // Name validation (only letters and spaces)
+    // Name validation (
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!name.match(nameRegex)) {
         alert('Name can only contain letters and spaces');
         return false;
     }
     
-    // Student ID validation (only numbers)
+    // Student ID validation 
     if (!/^\d+$/.test(studentId)) {
         alert('Student ID must contain only numbers');
         return false;
@@ -153,7 +153,7 @@ function validateInputs(name, studentId, email, contact) {
         return false;
     }
     
-    // Contact validation (only numbers, 10 digits)
+    // Contact validation 
     if (!/^\d{10}$/.test(contact)) {
         alert('Contact number must be 10 digits');
         return false;
@@ -162,10 +162,10 @@ function validateInputs(name, studentId, email, contact) {
     return true;
 }
 
-// Update scrollbar based on content
+// Update scrollbar
 function updateScrollbar() {
     const tbody = document.querySelector('#studentTable tbody');
-    if (students.length > 5) { // Show scrollbar if more than 5 rows
+    if (students.length > 5) { 
         tbody.style.maxHeight = '300px';
         tbody.style.overflowY = 'auto';
         tbody.style.display = 'block';
